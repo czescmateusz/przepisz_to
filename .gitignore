@@ -10,7 +10,18 @@ node_modules
 # Book build output
 _book
 
-# eBook build output
+# Markdown drafts — only the HTML versions are published
+*.md
+!README.md
+
+# Working notes (prompts, captions)
+_robocze/
+
+# Source books — never push these (copyrighted)
+zrodla/
 *.epub
 *.mobi
+*.azw3
 *.pdf
+*.fb2
+*.djvu
