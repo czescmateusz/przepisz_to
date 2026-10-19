@@ -8,6 +8,7 @@ Klasyka literatury przepisana z pomocą AI w stylu współczesnych autorów — 
 
 - `index.html` — strona główna
 - `lalka/` — „Lalka” Bolesława Prusa w stylu Sapkowskiego, Lipińskiej i Żulczyka
+- `dr-jekyll/` — „Doktor Jekyll i pan Hyde” Stevensona w stylu Michała Wiśniewskiego i Michała R. Wiśniewskiego
 - `assets/` — logo i wspólne grafiki
 
-Wszystkie teksty to pastisze pisane dla zabawy. Oryginały w domenie publicznej: [Wolne Lektury](https://wolnelektury.pl).
+Wszystkie teksty to pastisze wygenerowane przez AI dla przyjemności czytania. Oryginały w domenie publicznej: [Wolne Lektury](https://wolnelektury.pl).

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doktor Jekyll i pan Hyde — przepisany</title>
+<meta name="description" content="„Doktor Jekyll i pan Hyde” Stevensona przepisany w stylu współczesnych autorów.">
+<meta property="og:title" content="Doktor Jekyll i pan Hyde — przepisany">
+<meta property="og:description" content="„Doktor Jekyll i pan Hyde” Stevensona przepisany w stylu współczesnych autorów.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f4f2ee; --paper:#fbfaf7; --ink:#1d1c1a; --muted:#6b6862; --accent:#a5322e; --rule:#ddd8cf;
+  --head:'Playfair Display', serif; --body:'Lora', Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg:#121212; --paper:#1a1a1a; --ink:#ecebe8; --muted:#a3a19b; --accent:#e0b45a; --rule:#333; }
+}
+:root[data-theme="dark"] { --bg:#121212; --paper:#1a1a1a; --ink:#ecebe8; --muted:#a3a19b; --accent:#e0b45a; --rule:#333; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--body); font-size:1.15rem; line-height:1.75; }
+.top { max-width:42rem; margin:0 auto; padding:1.2rem 16px 0; display:flex; justify-content:space-between; align-items:center; gap:1rem;
+  font-family:var(--head); font-size:.85rem; letter-spacing:.12em; text-transform:uppercase; }
+.top a { color:var(--muted); text-decoration:none; }
+.top a:hover { color:var(--accent); }
+.toggle { background:none; border:1px solid var(--rule); color:var(--muted); border-radius:999px; padding:.25rem .7rem; cursor:pointer; font:inherit; font-size:.75rem; }
+main { max-width:42rem; margin:0 auto; padding:2.5rem 16px 4rem; }
+.kicker { font-family:var(--head); color:var(--accent); letter-spacing:.18em; text-transform:uppercase; font-size:.8rem; margin:0 0 .6rem; }
+h1 { font-family:var(--head); font-weight:700; font-size:clamp(2.2rem, 7vw, 3.6rem); line-height:1.05; margin:0 0 .8rem; text-wrap:balance; }
+h3 { font-family:var(--body); font-style:italic; font-weight:400; color:var(--muted); font-size:1.1rem; margin:0 0 2.5rem; line-height:1.5; }
+p { margin:0 0 1.1em; }
+blockquote { margin:0 0 2.5rem; padding:1.2rem 1.4rem; border-left:3px solid var(--accent); background:var(--paper); font-style:italic; color:var(--muted); }
+blockquote p:last-child { margin-bottom:0; font-style:normal; font-size:.95rem; }
+hr { border:0; text-align:center; margin:2.8rem 0; height:1.5rem; }
+hr::before { content:"❦"; color:var(--accent); font-size:1.1rem; letter-spacing:1.2em; padding-left:1.2em; }
+a { color:var(--accent); }
+em { font-style:italic; }
+strong { font-weight:600; }
+ol { padding-left:1.3rem; }
+ol li { margin-bottom:1.4rem; }
+.endnote { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--rule); font-size:.9rem; color:var(--muted); }
+.endnote p { margin:0 0 .6em; }
+.back { display:inline-block; margin-top:1.5rem; font-family:var(--head); letter-spacing:.12em; text-transform:uppercase; font-size:.85rem; text-decoration:none; }
+ol li a { font-family:var(--head); font-size:1.3rem; text-decoration:none; } ol li em { display:block; color:var(--muted); font-size:1rem; }
+</style>
+</head>
+<body>
+<header class="top">
+  <a href="../index.html">Przepisz to</a>
+  <button class="toggle" type="button" id="theme" aria-label="Zmień motyw">jasny / ciemny</button>
+</header>
+<main>
+<p class="kicker">Przepisz to</p>
+<h1>„Doktor Jekyll i pan Hyde” Roberta Louisa Stevensona — przepisany</h1>
+<p>Jeden rozdział, dwóch Michałów Wiśniewskich. Obaj przepisują ten sam fragment, czyli relację doktora Lanyona: noc, w której Hyde wypija miksturę i na oczach przyjaciela zamienia się w Jekylla. Wszystkie teksty to pastisze stylu — fabuła i kolejność wydarzeń jak u Stevensona.</p>
+<ol>
+<li><a href="01-jestem-jaki-jestem-wisniewski.html"><strong>Jestem jaki jestem</strong> — ale to Michał Wiśniewski</a>
+   <em>Rozdz. IX. „Lanyś, kochany!”, szuflada z literą E i mikstura, która robi show lepszy niż dym na koncercie.</em></li>
+<li><a href="02-zielona-kropka-r-wisniewski.html"><strong>Zielona kropka</strong> — ale to Michał R. Wiśniewski</a>
+   <em>Rozdz. IX. Doomscrolling listu od przyjaciela, dolina niesamowitości i mikstura zielona jak status „dostępny”.</em></li>
+</ol>
+<p>Oryginał za darmo: <a href="https://wolnelektury.pl/katalog/lektura/stevenson-dr-jekyll-i-mr-hyde.html">Wolne Lektury</a>.</p>
+
+</main>
+<script>
+(function(){
+  var r=document.documentElement, k='przepiszto-theme';
+  try{ var s=localStorage.getItem(k); if(s) r.setAttribute('data-theme',s); }catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var cur=r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var n=cur==='dark'?'light':'dark'; r.setAttribute('data-theme',n);
+    try{ localStorage.setItem(k,n); }catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
